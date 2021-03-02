@@ -1,0 +1,251 @@
+#multchats{
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    right:150px;
+    /* z-index: 60; */
+
+}
+#app{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    /* z-index: 50; */
+}
+#chat{
+    position: relative;
+    height:410px;
+    width:300px;
+    margin-top:50px;
+    box-shadow: 0px 0px 10px gray;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+    background:white;
+    
+}
+#over{
+    height:350px;
+    overflow-y: scroll;
+    width:300px;
+    display: flex;
+    flex-direction: column-reverse;
+    border-bottom: 1px solid gray;
+}
+#textinput{
+    height:30px;
+    width:300px;
+    padding:5px;
+    border:none;
+}
+#over ul li{
+    display: block;
+    float: right;
+    width:297px;
+}
+@-moz-document url-prefix() {
+    #over ul li{
+        display: block;
+        float: right;
+        width:290px;
+    }
+  }
+#chathead{
+    width:300px;
+    height:30px;
+    /* border: 1px solid black; */
+    position:absolute;
+    left:0px;
+    top:0px;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+    box-shadow: 0 3px 2px -2px gray;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding:10px;
+    align-items: center;
+}
+#chatbody{
+    position: absolute;
+    bottom:0px;
+    left:0px;
+}
+#messagesend{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:35px;
+    height:25px;
+    background:white;
+    position: absolute;
+    top:3px;
+    right:0px;
+    z-index:1000;
+    cursor: pointer;
+}
+#messagesend img{
+    width:35px;
+}
+#textsend{
+    position:relative;
+}
+#users{
+    
+    margin-top: 20px;
+}
+#act{
+    display: flex;
+    position:absolute;
+    top:0px;
+    right:0px;
+    height:20px;
+    width:140px;
+    justify-content: center;
+    border-bottom:1px solid gray;
+    align-items: center;
+    
+}
+#friends{
+    display: flex;
+    width:140px;
+    height:450px;
+    position: relative;
+    flex-direction: column;
+}
+#friend{
+    width: 138px;
+    height:30px;
+    cursor:pointer;
+    text-align: center;
+}
+#friend:hover{
+    background:rgb(233, 226, 226);;
+}
+#friendspos{
+    position: fixed;
+    right:0px;
+    bottom:0px;
+    display:block;
+}
+#over::-webkit-scrollbar {
+width: 7px;
+border-radius: 4px;
+}
+#over::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+#over::-webkit-scrollbar-thumb {
+background: #888; 
+border-radius: 10px;
+box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+#over::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+#mess{
+    position: fixed;
+    right:2px;
+    bottom:5px;
+    width:50px;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid black;
+    border-radius: 50%;
+    background:white;
+    box-shadow: 0px 0px 5px black;
+    cursor:pointer;
+    visibility: hidden;
+}
+#messageicon{
+    height:30px;
+    width:30px;
+}
+.hide{
+    display:block !important;
+}
+#act img{
+    display:none;
+}
+@media only screen and (max-width: 500px) {
+    .hide{
+        display:none;
+    }
+    html,body {    
+        height:100%;
+        margin: 0;
+    }
+    #friendspos{
+        width:100%;
+        height:90%;
+        position: fixed;
+        right:0px;
+        bottom:0px;
+        background:white;
+        border:none;
+        box-shadow: 0px 0px 5px black;
+            
+    }
+    #friends{
+        width:100%;
+        height:100%;
+        border:none;
+    }
+    #friend{
+        border-bottom:1px solid black;
+        width:100%;
+    }
+    #frienddiv{
+        margin-top: 0px;
+    }
+    #act{
+        width:100%;
+        height:30px;
+        display: flex;
+        justify-content: space-between;
+        padding:10px;
+        z-index: -10;
+        position: relative;
+    }
+    #act img{
+        display:block;
+        height: 15px;
+    }
+    #iqs{
+        cursor:pointer;
+        position: relative;
+        z-index:10;
+    }
+    #chat{
+        height:100%;
+        width:100%;
+    }
+    #multchats{
+        position: fixed;
+        bottom: 0px;
+        right:0px;
+        height:100%;
+        width:100%;
+        margin-bottom:50px;
+        z-index: 60;
+    }
+    #over{
+        width:100%;
+        /* display: inline-table; */
+    }
+    #chathead{
+        width:100%;
+        z-index:100;
+    }
+    #textinput{
+        width:100%;
+    }
+    #over ul li{
+        width:114%;
+    }
+    #mess{
+        visibility: visible;
+    }
+    
+}

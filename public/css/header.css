@@ -1,0 +1,325 @@
+.nav{
+    display:flex;
+    justify-content:space-between;
+    font-size:20px;
+    height:10%;
+    width:100%;
+    text-decoration: none;
+    position:fixed;
+    z-index:0;
+}
+.nav ul li:not(#comli){
+   padding: 15px;
+}
+.nav a{
+    color:black;
+    text-decoration:none;
+}
+#comli{
+    padding-top:15px;
+    cursor: pointer;
+}
+.comp{
+    position: relative;
+    display:none;
+}
+
+#comp{
+    width:250px;
+    background:white;
+    overflow: hidden;
+    position: relative;
+    z-index:100;
+    
+    
+}
+#comp ul li{
+    list-style:none;
+    padding:5px !important;
+    font-size:15px;
+    margin-left:-40px;
+    border-bottom:1px solid rgb(168, 163, 163);
+    border-left:1px solid rgb(168, 163, 163);
+    border-right:1px solid rgb(168, 163, 163);
+    /* border-radius: 4px; */
+}
+#email,#name{
+    display:flex;
+    align-items: center;
+    width:30px;
+    height:15px;
+    margin-right:-100px;
+    position: absolute;
+    right:103px;
+    top:0px;
+    font-size:12px;
+    cursor:pointer;
+}
+#addfriend{
+    position:absolute;
+    right:0px;
+    top:3px;
+    z-index:1;
+    height:20px;
+    width:25px;
+    background:white;  
+}
+#outli{
+    position:relative;
+    z-index:0;
+}
+
+img[id^="outimg.friend"]{
+    height:20px;
+    position:absolute;
+    right:2px;
+    top:3px;
+    z-index:10;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgb(104, 184, 104);
+    border:1px solid rgb(104, 184, 104);
+}
+img[id^="outimg.requested"]{
+    height:20px;
+    position:absolute;
+    right:2px;
+    top:3px;
+    z-index:10;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgb(196, 83, 83);
+    border:1px solid  rgb(196, 83, 83);
+}
+img[id^="outimg.fordelete"]{
+    height:20px;
+    position:absolute;
+    right:30px;
+    top:3px;
+    z-index:10;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgb(196, 83, 83);
+    border:1px solid  rgb(196, 83, 83);
+}
+img[id^="outimg.unknown"]{
+    height:20px;
+    position:absolute;
+    right:2px;
+    top:3px;
+    z-index:10;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgb(80, 80, 185);
+    border:1px solid rgb(80, 80, 185);
+}
+img[id^="outimg.foradd"]{
+    height:23px;
+    position:absolute;
+    right:2px;
+    top:3px;
+    z-index:10;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px yellow;
+    border:1px solid yellow;
+}
+img[id^="outimg.foradd"]:hover{
+    height:24px !important;
+}
+img[id^="outimg"]:hover{
+    height:21px;
+}
+#notification{
+    position: relative;
+    width:23px;
+    height:30px;
+    font-size: 11px;
+    margin-left:19px;
+    text-align: center;
+    color:white;
+    display:flex;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer
+}
+#notif{
+    width:23px;
+    position: absolute;
+    top:4px;
+    right:0px;
+    z-index:0;
+}
+#notcount{
+    width:12px;
+    height:15px;
+    background:red;
+    border-radius: 50%;
+    position: absolute;
+    top:2px;
+    right:0px;
+    z-index:1;
+    display:none;
+}
+#menu>div{
+    height:4px;
+    width:20px;
+    background:black;
+    margin:3px;
+    border-radius: 3px;
+}
+#menu{
+    margin-top: 8px;
+    margin-right: 0px;
+}
+#menulist{
+    display: none;
+}
+#notifications{
+    position: fixed;
+    right:0px;
+    top:55px;
+    width:310px;
+    min-height:35px;
+    max-height:200px;
+    overflow-y: scroll;
+    box-shadow: 0px 0px 5px green;
+    display: none;
+}
+.show{
+    display: block !important;
+}
+#notalert{
+    display:flex;
+    justify-content: center;
+    width:190px;
+    height: 50px;
+    border:1px solid red;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    margin-top:10px;
+    display: none;
+    cursor: pointer;
+}
+#notpos{
+    position: fixed;
+    left:30px;
+    bottom:50px;
+}
+#notcontent{
+    position: absolute;
+    z-index: -1;
+    left:10px;
+}
+#notclose{
+    position: absolute;
+    top:-5px;
+    right:0px;
+    width:10px;
+    height:10px;
+    z-index:10;
+    cursor: pointer;
+    font-size:15px;
+}
+#arrow{
+    display: none;
+}
+/* #likedpost{
+} */
+#undefinedpost{
+    width: 400px;
+    margin-left: auto; 
+    margin-right: auto; 
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1000;
+    top:50px;
+    text-shadow: 0px 0px 2px black;
+    display: none;
+}
+#likedpost{
+    width: 400px;
+    margin-left: auto; 
+    margin-right: auto; 
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:20px;
+}
+@media only screen and (max-width: 500px) {
+    .nav{
+        display:flex;
+        justify-content:space-between;
+        font-size:20px;
+        height:10%;
+        width:100%;
+        text-decoration: none;
+        position:relative;
+        z-index:40;
+    }
+    .phonesearcher{
+        width:100%;
+        height:45px;
+        background:#f7f7f7;
+        position:absolute;
+        left:0px;
+        top:0px;
+        z-index:-40;
+        display: flex;
+    }
+    #none{
+        display: none;
+    }
+    .phonesearcher #input{
+        margin-top:3px;
+        width:250px;
+        font-size: 15px;
+        padding-left:2px;
+        padding:5px;
+    }
+    .phonesearcher #comp{
+        width:250px;
+    }
+    .nav ul li:not(#comli){
+        padding: 8px;
+     }
+     #comli{
+        padding-top:8px;
+    }
+    .phonesearcher .comp{
+        position: relative;
+        height:50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 8px;
+    }
+    .phonesearcher #arrow{
+        width:30px;
+        height:15px;
+        cursor: pointer;
+        position: absolute;
+        top:23px;
+        left:5px;
+        display: block;
+    }
+    #phoneemail,#phonename{
+        display:flex;
+        align-items: center;
+        width:30px;
+        height:15px;
+        margin-right:-100px;
+        position: absolute;
+        right:103px;
+        top:0px;
+        font-size:12px;
+        cursor:pointer;
+    }
+    #notifications{
+        width:293px;
+        position: inherit;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #likedpost{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
